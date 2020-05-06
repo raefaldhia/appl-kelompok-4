@@ -47,7 +47,6 @@ public class App implements CommandLineRunner {
 			System.out.println("Expected exception");
 		}
 
-
 		repository.findById(newsItem1.getId());
 		repository.findById(newsItem1.getId());
 		repository.findById(newsItem1.getId());
@@ -58,6 +57,9 @@ public class App implements CommandLineRunner {
 		repository.findById(newsItem3.getId());
 		repository.findById(newsItem3.getId());
 		repository.findById(newsItem4.getId());
+		
+		// touch all
+		repository.findByTitleLike("title");
 
 		System.out.println("News found with findAll():");		
 		System.out.println("-------------------------------");
